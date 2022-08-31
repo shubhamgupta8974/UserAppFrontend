@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+</head>
+<body>
+ <div class="container">
+  <div class="row">
+  <div class="col-md-9 col-sm-12">
+<div class="login-form">
+    <div class="card">
+      <h2 class="head py-2">Login</h2>
+      <form class="user-login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="row">
+          <div class="col-md-6 roundedTextBox mb-3">
+            <label style="border: none; border-radius: 3px;  padding-left: 10px;">Select Role</label>
+            <select id="selectRole" formControlName="userRole">
+              <option value="">Select Role</option>
+              <option value="admin">Admin</option> 
+              <option value="user">User</option>          
+            </select>
+          </div>
+          <div class="col-md-6 roundedTextBox mb-3">
+            
+            <label style="border: none; border-radius: 3px;  padding-left: 8px;">Username</label>
+            <input type="text" class="form-control mb-2" id="username" formControlName="userName" placeholder="Enter User Name">
+          
+          </div>
+          <div class="col-md-6 roundedTextBox mb-3">
+            <label style="border: none; border-radius: 3px;  padding-left: 10px;">Password</label>
+            <input type="password" class="form-control mb-2" id="inputPassword" formControlName="password" placeholder="Enter Password">
+          </div>
+        </div>
+        <br>
+        <div class="buttons text-center">
+          <button class="btn-customBlue mr-2" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<router-outlet></router-outlet>
+</div>
+</div>
+</div>
+</body>
